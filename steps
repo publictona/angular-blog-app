@@ -1,0 +1,5 @@
+step 1> import ReactiveFormsModule, HttpClientModule in app.modules.ts
+ step 2> now create routing app-routing.module.ts
+
+ step 3>  create blog class for data model => ng g class service/Blog
+ step 4> now make a service for angular project => it is a sheared code so that we use this code in anywhere ==> ng g s service/crud

@@ -17,12 +17,14 @@ export class AddBlogComponent {
       this.blogForm = this.formBuilder.group({
         _id : [''],
         title :  [''],
-        body : ['']
+        body : [''],
+        tags:[''],
+        category:[''],
       })
     }
     ngOnInit(): void {}
 
-    onsubmit():any {
+    onSubmit():any {
       this.crudApi.AddBlog(this.blogForm.value).subscribe((res:any)=>{
         console.log("data added successfully")
         this.ngZone.run(()=>{

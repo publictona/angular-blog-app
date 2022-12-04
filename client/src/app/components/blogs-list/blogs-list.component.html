@@ -1,1 +1,36 @@
-<p>blogs-list works!</p>
+<div class="contanier">
+  <div class="rwo d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 mb-3 border-radius-10">
+    <h2 >All blog List</h2>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr style="background-color: gray;">
+          <th scope="col">Id</th>
+          <th scope="col"> Blog-Title</th>
+          <th scope="col">Blog-Content</th>
+          <th scope="col">Write-Tags</th>
+          <th scope="col">Blog-Category</th>
+          <th class="text-center" scope="col">Action</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor = "let blog of Blogs; let i= index">
+          <th scope="row">{{blog.id}}</th>
+          <td>{{blog.title}}</td>
+          <td>{{blog.body}}</td>
+          <td>{{blog.tags}}</td>
+          <td>{{blog.category}}</td>
+
+          <td class="text-center">
+            <button class="btn btn-sm btn-success m-2" style="width: 57px;" routerLink = "/edit-blog/{{blog.id}}"> Edit </button>
+            <button class= "btn btn-sm btn-danger m-2"  (click) = "delete(blog.id, i)"> Delete </button>
+              
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

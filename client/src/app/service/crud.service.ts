@@ -10,9 +10,9 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class CrudService {
   //node js api link
-  REST_API : string = "http://localhost:3000/api";
+  REST_API : string = "http://localhost:8800";
   //set http header so it can not give cors error
-  httpHeaders = new HttpHeaders().set('Content:type' ,'application/json')
+  httpHeaders = new HttpHeaders().set('Content-Type' ,'application/json')
  constructor(private httpClient:HttpClient) { }
 
  AddBlog(data:Blog): Observable<any>{
@@ -65,7 +65,7 @@ errorMessage = error.error.message;
 
   }
   console.log(errorMessage)
-  return throwError(errorMessage)
+ return throwError(errorMessage)
 
 }
 

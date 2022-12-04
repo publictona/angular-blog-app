@@ -1,7 +1,9 @@
 export class Blog {
-    _id!: String;
+    id!: String;
     title! : String;
     body!:String;
+    tags!:String;
+    category!:String;
 
 
 
